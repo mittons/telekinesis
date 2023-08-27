@@ -5,4 +5,7 @@ from django.http import HttpResponse
 
 
 def home(request):
+    return render(request, 'test.html')
+
+def home2(request):
     return HttpResponse("Halló Sól og Máni!")
