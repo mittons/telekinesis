@@ -62,17 +62,14 @@
         <h1>telekinesis</h1>
     </header>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Technology</a>
-        <a href="#">Travel</a>
-        <a href="#">Food</a>
-        <a href="#">Fashion</a>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'technology' %}">Technology</a>
+        <a href="{% url 'travel' %}">Travel</a>
+        <a href="{% url 'food' %}">Food</a>
+        <a href="{% url 'fashion' %}">Fashion</a>
     </nav>
     <main>
-        <h2>Latest Posts</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+		{% block content %}{% endblock %}
     </main>
 </body>
 </html>

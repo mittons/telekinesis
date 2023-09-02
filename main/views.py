@@ -5,7 +5,16 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'test.html')
+    return render(request, 'home.html')
 
-def home2(request):
-    return HttpResponse("Halló Sól og Máni!")
+def technology(request):
+    return render(request, 'technology.html')
+
+def travel(request):
+    return render(request, 'travel.html')
+
+def food(request):
+    return render(request, 'food.html')
+
+def fashion(request):
+    return render(request, 'fashion.html')

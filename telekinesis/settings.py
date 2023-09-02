@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w)20a1d^h0*_go6l%e4enf-qwsc%uq*eq73i*aoxt6m4yq%s4n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['telekinesis-dd7e15466265.herokuapp.com', '127.0.0.1', 'www.telekines.is', 'telekines.is']
+ALLOWED_HOSTS = ['telekinesis-dd7e15466265.herokuapp.com', '127.0.0.1', 'localhost', 'www.telekines.is', 'telekines.is']
 
 
 # Application definition
