@@ -21,3 +21,7 @@ def fashion(request):
 
 def blogposttemplate(request):
     return render(request, 'blogposttemplate.html')
+
+def blogwysiwygtest(request):
+    return render(request, 'blogwysiwygtest.html')
+

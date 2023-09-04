@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
     'main',
 ]
 
@@ -128,3 +129,16 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# TinyMCE default config    
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 300,
+    'width': 600,
+    'menubar': False,
+    'plugins': 'advlist autolink lists link image charmap print preview anchor',
+    'toolbar': 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+    'toolbar_mode': 'floating',
+}
+

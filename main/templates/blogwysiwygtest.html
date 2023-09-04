@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<style>
+		h2 {
+			margin: 0;
+			font-size: 28px;
+		}
+		
+		time {
+			font-style: italic;
+		}
+		
+		.author {
+			font-weight: bold;
+		}
+		
+		article {
+			margin-bottom: 20px;
+		}
+		
+		h3 {
+			font-size: 24px;
+			margin: 10px 0;
+		}
+		
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 10px;
+		}
+		
+		figure {
+			margin: 20px 0;
+			text-align: center;
+		}
+		
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+		
+		figcaption {
+			font-style: italic;
+			color: #888;
+		}
+		
+		footer {
+			text-align: center;
+			font-size: 14px;
+			color: #888;
+			margin-top: 20px;
+		}
+	</style>
+
+	<div id="blog-blob">	
+		<article>
+			<header>
+				<h2>Introduction</h2>
+			</header>
+			<p>This is the introduction of your blog post. It provides a brief overview of what the post is about.</p>
+		</article>
+
+		<article>
+			<header>
+				<h2>Main Content Section</h2>
+			</header>
+			<p>This is the main content of your blog post. You can organize it into several paragraphs or sections, each addressing a different aspect of your topic.</p>
+				<figure>
+					<img src="image.jpg" alt="Image description">
+					<figcaption>Caption for the image.</figcaption>
+				</figure>	
+			<p>More content...</p>
+		</article>
+
+		<article>
+			<header>
+				<h2>Conclusion</h2>
+			</header>
+			<p>Summarize the key points discussed in your blog post and provide a closing thought.</p>
+		</article>
+	</div>
+
+	{% load static %}
+	<script src="{% static 'tinymce/tinymce.min.js' %}"></script>
+	<script>
+		tinymce.init({
+			selector: '.tinymce-editor',
+			height: 500, // Set the editor height
+			plugins: 'autoresize', // Add any required plugins
+			// Other configuration options
+		});
+	</script>
+	
+	<br>
+	<hr>
+	<br>
+	<h2>TinyMCE Editor</h2>
+	<br>
+	<textarea class="tinymce-editor" name="content"></textarea>
+	<br>
+	<button id="tinymcesubmit" type="submit">Submit</button>
+	
+	<!-- This textarea with class "tinymce-editor" will become a TinyMCE editor -->
+	
+	<script>
+		// Copy content from div to TinyMCE on page load
+		document.addEventListener('DOMContentLoaded', function () {
+			var divContent = document.getElementById('blog-blob').innerHTML;
+			var textarea = document.querySelector('.tinymce-editor');
+			textarea.value = divContent;
+		});
+
+		// Copy content from TinyMCE to div on form submission
+		document.getElementById('tinymcesubmit').addEventListener('click', function () {
+			var textareaContent = tinymce.activeEditor.getContent();
+			var div = document.getElementById('blog-blob');
+			div.innerHTML = textareaContent;
+		});
+	</script>
+	
+	
+{% endblock %}
