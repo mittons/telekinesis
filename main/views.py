@@ -18,3 +18,6 @@ def food(request):
 
 def fashion(request):
     return render(request, 'fashion.html')
+
+def blogposttemplate(request):
+    return render(request, 'blogposttemplate.html')
