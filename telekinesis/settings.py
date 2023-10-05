@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'telekinesis.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 DATABASES = {}
 
-if os.environ.get('DJANGO_ENV') == 'production' and not request.is_secure():
+if os.environ.get('DJANGO_ENV') == 'production':
     DATABASES = {
         'default': dj_database_url.config()
     }
