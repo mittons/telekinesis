@@ -1,0 +1,41 @@
+/* Styles for h1 inside #blog-post */
+#post-list-header {
+    font-size: 2.5em;              /* Larger text for main title */
+    color: #333;                  /* Dark gray text */
+    margin-top: 0;                /* No top margin to keep it close to any element above */
+    margin-bottom: 16px;          /* Spacing below the title */
+    border-bottom: 2px solid #e0e0e0;  /* Subtle line beneath the title for emphasis */
+    padding-bottom: 8px;          /* Padding to space title from border */	
+}
+
+.catgegory-post h1 {
+    font-size: 1.5em;              /* Larger text for main title */
+    color: #333;                  /* Dark gray text */
+    margin-top: 0;                /* No top margin to keep it close to any element above */
+    margin-bottom: 16px;          /* Spacing below the title */
+    border-bottom: 2px solid #e0e0e0;  /* Subtle line beneath the title for emphasis */
+    padding-bottom: 8px;          /* Padding to space title from border */
+}
+
+/* Styles for h2 and h3 inside #blog-post */
+.catgegory-post h2, 
+.catgegory-post h3 {
+    font-size: 1.25em;            /* Make h2 slightly larger than h3 */
+    color: #555;                  /* Slightly lighter dark gray than h1 */
+    margin-top: 24px;             /* Spacing above subheadings */
+    margin-bottom: 12px;          /* Spacing below subheadings */
+}
+
+.catgegory-post h3 {
+    font-size: 1em;             /* h3 is slightly smaller than h2 */
+    color: #777;                  /* Slightly lighter gray for less emphasis */
+}
+
+/* Styles for p (paragraph) inside #blog-post */
+.catgegory-post p {
+    font-size: 0.75em;               /* Standard size for paragraph text */
+    color: #666;                  /* Dark gray but lighter than headings */
+    line-height: 1.5;             /* Improve readability by increasing space between lines */
+    margin-bottom: 16px;          /* Standard spacing between paragraphs */
+    text-align: justify;          /* Text align to both left and right for clean look */
+}
